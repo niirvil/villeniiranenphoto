@@ -32,15 +32,32 @@
       width:100%;
       max-width:520px;
       text-align:center;
+      padding: 5px;
+      margin: auto;
     }
 
     .profile{
       margin-bottom:22px;
     }
-    .avatar{
-      width:420px;height:420px;
-      display:inline-flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,0.6), inset 0 -4px 18px rgba(255,255,255,0.03);
+    .avatar {
+      width: 100%;
+      max-width: 420px;
+      aspect-ratio: 1 / 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.6),
+                  inset 0 -4px 18px rgba(255,255,255,0.03);
+      border-radius: 12px;
+      overflow: hidden;
     }
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
     h1{margin:12px 0 6px;font-size:20px}
     p.bio{margin:0;color:var(--muted);font-size:14px}
 
@@ -83,7 +100,6 @@
     }
 
     @media (max-width:420px){
-      .avatar{width:76px;height:76px;border-radius:14px;font-size:22px}
       a.link{padding:14px}
     }
   </style>
